@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpportunityKit - check if you are ready to apply</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <b class="logo"><span class="mark"></span>OpportunityKit</b>
+  <nav id="nav">
+    <button data-p="discover">Discover</button>
+    <button data-p="add">Add opportunity</button>
+    <button data-p="premium">Premium</button>
+    <button data-p="about">About</button>
+  </nav>
+</header>
+<div class="notice">Demo prototype. Opportunities marked "Sample data" are made up for this demo and are not verified. Always confirm rules on the official source before applying.</div>
+<main>
+  <section id="discover" class="page">
+    <div class="hero"><h1>Find it. Check it. Apply ready.</h1><p>Search an internship, scholarship or competition and see right away if you match.</p><input type="search" id="q" class="search" placeholder="Try: css competition, python internship, scholarship" aria-label="Search opportunities"></div>
+    <section id="dprof" class="prof"></section>
+    <div class="tools">
+      <div id="chips"></div>
+      <label class="chk"><input type="checkbox" id="up" checked> Upcoming only</label>
+      <label class="chk">Sort <select id="sort"><option value="deadline">Nearest deadline</option><option value="match">Best match first</option></select></label>
+    </div>
+    <p class="mut" id="count"></p>
+    <div id="cards" class="grid"></div>
+  </section>
+  <section id="checker" class="page" hidden></section>
+  <section id="add" class="page" hidden></section>
+  <section id="premium" class="page" hidden></section>
+  <section id="about" class="page" hidden>
+    <h1>About OpportunityKit</h1>
+    <h2>The problem</h2>
+    <p>Internships, scholarships and competitions list their rules in different places and formats. Students cannot tell if they qualify or what to prepare.</p>
+    <h2>How it works</h2>
+    <p>Every opportunity becomes one checklist. Each requirement is compared with your details and gets one of three statuses: <b>Match</b>, <b>Mismatch</b> or <b>Missing info</b>. Missing info is never treated as a fail. The app asks you for it instead.</p>
+    <h2>What is different</h2>
+    <ul>
+      <li>Clear visible rules, no hidden AI yes/no answer. Each status has a plain reason.</li>
+      <li>Missing information is separate from failing.</li>
+      <li>The Gap-to-Action Roadmap turns every gap into a next step.</li>
+      <li>You can add any opportunity yourself, so it is not limited to the examples.</li>
+    </ul>
+    <h2>Technology</h2>
+    <p>HTML, CSS and JavaScript. A rule-based comparison runs in your browser. Your details stay on your device (browser storage). There is no backend and no login.</p>
+    <h2>Honest notes</h2>
+    <ul>
+      <li>Sample opportunities are made up. They are not verified listings.</li>
+      <li>Premium is a demo preview. No real payment happens.</li>
+      <li>Features marked "Planned" are not built yet.</li>
+    </ul>
+  </section>
+</main>
+<div id="toast" role="status"></div>
+<script src="app.js"></script>
+</body>
+</html>
